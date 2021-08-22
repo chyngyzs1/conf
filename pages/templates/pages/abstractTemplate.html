@@ -1,0 +1,63 @@
+{% load static %}
+<html lang="en">
+<head>
+    {% include 'pages/includes/links.html' %}
+    <title>Conference Site</title>
+</head>
+<body>
+{% include 'pages/includes/menubar.html' %}
+<div class="home_content">
+   {% include 'pages/includes/header.html' %}
+    <main>
+        <div class="main">
+            <div class="container">
+                <div class="abstract">
+                    <h2> Abstract Submission Format</h2>
+                    <h2>Abstracts</h2>
+                    <ul class="events">
+                        <li><i class="far fa-square ico"></i> Abstracts can be submitted only in <span
+                                class="important">English</span>.
+                        </li>
+                        <li><i class="far fa-square ico"></i> The maximal length of the abstract is <span
+                                class="important"> 1(one) page</span>.
+                        </li>
+                        <li><i class="far fa-square ico"></i> The abstract should be prepared in <span
+                                class="important">LaTex (as a LaTeX-file)</span> and carefully checked for misprints. It
+                            <span class="important">must not</span> include automatic numbering and automatic links to
+                            formulas, theorems, article, etc.
+                        </li>
+                        <li><i class="far fa-square ico"></i> Please do not use your own macros and do not include
+                            pictures in the abstract.
+                        </li>
+                        <li><i class="far fa-square ico"></i> Please use the following templates when preparing your
+                            abstract: <a href="#"><span class="important">Abstract_Template</span></a> .
+                        </li>
+                        <li><i class="far fa-square ico"></i> Please do not edit the style file MADEA9.sty.</li>
+                        <li><i class="far fa-square ico"></i> The TeX- and PDF-files of the abstract should be sent to
+                            <a href="http://madea2021.manas.edu.kg/"><span
+                                    class="important">madea2021@manas.edu.kg</span></a>.
+                        </li>
+                        <li><i class="far fa-square ico"></i> The deadline for abstract submission is <span
+                                class="important">April 30, 2021. Submission of abstracts has been extended until May 10, 2021.</span>
+                            .
+                        </li>
+                        <li><i class="far fa-square ico"></i> The Organizing Committee reserves the right to reject
+                            submitted abstracts that do not match the topics of the conference or do not meet the
+                            requirements.
+                        </li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+    {% include 'pages/includes/footer.html' %}
+</div>
+</div>
+
+
+<script src="{%static 'pages/js/index.js'%}"></script>
+</body>
+</html>

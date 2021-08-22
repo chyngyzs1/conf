@@ -1,0 +1,51 @@
+{% load static%}
+<html lang="en">
+<head>
+    {% include 'pages/includes/links.html' %}
+    <title>Conference Site</title>
+</head>
+<body>
+{% include 'pages/includes/menubar.html' %}
+<div class="home_content">
+    {% include 'pages/includes/header.html' %}
+    <main>
+        <div class="main">
+            <div class="container">
+
+                <div class="fields">
+                    <h2>Scientific Fields of the Conference:</h2>
+                    <h3>Topics of Interest include, but not limited to :</h3>
+                    <ul class="fields-of-conf">
+                        <li><i class="far fa-circle ico"></i> Applied analysis</li>
+                        <li><i class="far fa-circle ico"></i> Approximation and Interpolation theory</li>
+                        <li><i class="far fa-circle ico"></i> Extremal problems</li>
+                        <li><i class="far fa-circle ico"></i> Functional and Harmonic analysis</li>
+                        <li><i class="far fa-circle ico"></i> Functional-differential and stochastic equations</li>
+                        <li><i class="far fa-circle ico"></i> Functions of real and complex variables</li>
+                        <li><i class="far fa-circle ico"></i> Integral transformations</li>
+                        <li><i class="far fa-circle ico"></i> Partial differential equations</li>
+                        <li><i class="far fa-circle ico"></i> Qualitative and asymptotic methods in the theory of
+                            differential equations
+                        </li>
+                        <li><i class="far fa-circle ico"></i> Summability theory</li>
+                        <li><i class="far fa-circle ico"></i> Geometry</li>
+                        <li><i class="far fa-circle ico"></i> Algebra and Topology</li>
+                        <li><i class="far fa-circle ico"></i> Mathematical and Computer Modelling</li>
+                        <li><i class="far fa-circle ico"></i> History and Teaching of Mathematics, Informatics and
+                            Physics
+                        </li>
+                        <li><i class="far fa-circle ico"></i> Other</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+     {% include 'pages/includes/footer.html' %}
+
+</div>
+<script src="{% static 'pages/js/index.js' %}"></script>
+
+</body>
+</html>

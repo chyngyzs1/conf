@@ -1,0 +1,58 @@
+{% load static %}
+<html lang="en">
+<head>
+    {% include 'pages/includes/links.html' %}
+    <title>Conference Site</title>
+</head>
+<body>
+{% include 'pages/includes/menubar.html' %}
+<div class="home_content">
+    {% include 'pages/includes/header.html' %}
+    <main>
+        <div class="main">
+            <div class="container">
+                <div class="proceedings">
+                    <h2> Proceedings</h2>
+                    <h4>Selected papers will be published in one of the following journals:</h4>
+
+                    <ul class="events">
+                        <li><i class="far fa-square ico"></i> <a href="http://umj.imath.kiev.ua/index.php/umj"
+                                                                 target="blank"><span class="important"> Ukrainian Mathematical Journal </span></a>(Web
+                            of Science)
+                        </li>
+                        <li><i class="far fa-square ico"></i> <a href="http://https//sites.google.com/view/ukrainianmb"
+                                                                 target="blank"><span class="important"> Ukrainian Mathematical Bulletin - J. Math.Sci. </span></a>
+                            ( SCOPUS )
+                        </li>
+                        <li><i class="far fa-square ico"></i> <a href="https://www.imath.kiev.ua/~nosc/web/index.php"
+                                                                 target="blank"><span class="important"> Nonlinear Jscillations</span></a>
+                            ( SCOPUS )
+                        </li>
+                        <li><i class="far fa-square ico"></i> <a
+                                href="http://www.isaacpub.org/AboutThisJournal.aspx?ids=3" target="blank"> <span
+                                class="important"> Advances in Analysis</span></a></li>
+                        <li><i class="far fa-square ico"></i><a
+                                href="http://www.isaacpub.org/AboutThisJournal.aspx?ids=3" target="blank"><span
+                                class="important"> Manas Journal of Engineering</span></a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <br>
+            </div>
+        </div>
+    </main>
+     {% include 'pages/includes/footer.html' %}
+
+</div>
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="{% static 'pages/js/index.js' %}"></script>
+</body>
+</html>

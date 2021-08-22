@@ -1,0 +1,62 @@
+{% load static %}
+<html lang="en">
+<head>
+    {% include 'pages/includes/links.html' %}
+    <title>Conference Site</title>
+</head>
+<body>
+{% include 'pages/includes/menubar.html' %}
+<div class="home_content">
+    {% include 'pages/includes/header.html' %}
+    <main>
+        <div class="main">
+            <div class="container">
+                <div class="speaker">
+
+
+                    <div class="fields">
+                        <h2> Tentative List of Plenary Speakers :</h2>
+                        <ul class="fields-of-conf">
+                            <li><i class="far fa-circle ico"></i> Bilalov B. (Institute of Mathematics and Mechanics NAS
+                                of Azerbaijan)
+                            </li>
+                            <li><i class="far fa-circle ico"></i> Chekeyev A. (Natonal University of Kyrgyz Republic,
+                                Bishkek)
+                            </li>
+                            <li><i class="far fa-circle ico"></i> Feng Dai (University of Toronto, Canada)</li>
+                            <li><i class="far fa-circle ico"></i> Golberg A. (HIT Holon Institute of Technology, Israel)
+                            </li>
+                            <li><i class="far fa-circle ico"></i> Hans Peter Blatt (Katholische Universität
+                                Eichstätt-Ingolstadt, Germany)
+                            </li>
+                            <li><i class="far fa-circle ico"></i> Kadıoğlu E. (Atatürk University, Turkey)</li>
+                            <li><i class="far fa-circle ico"></i> Kocinac L. (University of Niš, Serbia)</li>
+                            <li><i class="far fa-circle ico"></i> Kopotun K. (University of Manitoba, Canada)</li>
+                            <li><i class="far fa-circle ico"></i> Mahmudov N. (Eastern Mediterranean University, T.R.
+                                North Cyprus)
+                            </li>
+                            <li><i class="far fa-circle ico"></i> Salimov A. (Baku State University, Azerbaijan)</li>
+                            <li><i class="far fa-circle ico"></i> Savaş E. (Uşak University, Turkey)</li>
+                            <li><i class="far fa-circle ico"></i> Shevchuk I.A. (Taras Shevchenko Nat. Univ. of Kyiv,
+                                Ukraine)
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+    {% include 'pages/includes/footer.html' %}
+</div>
+
+
+<script src="{% static 'pages/js/all.js' %}"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="{% static 'pages/js/index.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+<head>
+    {% include 'pages/includes/links.html' %}
+    <link rel="stylesheet" href="{% static 'pages/css/login.css' %}"/>
+    <title>Conference Site</title>
+</head>
+<body>
+{% include 'pages/includes/menubar.html' %}
+<div class="home_content">
+
+     {% include 'pages/includes/header.html' %}
+    <div class="container">
+        <div class="formWrapper">
+            <div class="formDiv">
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-danger alert_errors">
+                    <p>{{message}}</p>
+                </div>
+                {% endfor %}
+                {% endif %}
+                <h2>SIGN IN</h2>
+
+                <form method="POST" action="{% url 'login_page' %}">
+                    {% csrf_token %}
+                    <div class="formGroup">
+                        <i class="far fa-user icon"></i>
+                        <input type="text" name="email" id="email" placeholder="Username"/>
+                    </div>
+                    <div class="formGroup">
+                        <i class="fas fa-lock icon"></i>
+                        <input type="password" name="password" id="password" placeholder="*********"/>
+                    </div>
+                    <input type="submit" class="btn" value="SIGN IN"/>
+                    <div class="link-to-sign-in">
+                        <p>Doesn't have account?</p>
+                        <a href="{% url 'register_page' %}" class="link-login">SIGN UP</a>
+                    </div>
+                </form>
+            </div>
+            <div class="welcomeDiv">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static 'pages/js/all.js' %}"></script>
+<script src="{% static 'pages/js/index.js' %}"></script>
+
+</body>
+</html>

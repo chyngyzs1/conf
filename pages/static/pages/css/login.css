@@ -1,0 +1,445 @@
+/* Google Font CDN Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  /* overflow: hidden; */
+}
+::selection {
+  color: #fff;
+  background: #11101d;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 78px;
+  background: #11101d;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.active {
+  width: 240px;
+}
+.sidebar .logo_content .logo {
+  color: #fff;
+  display: flex;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.sidebar.active .logo_content .logo {
+  opacity: 1;
+  pointer-events: none;
+}
+.logo_content .logo i {
+  font-size: 28px;
+  margin-right: 5px;
+}
+.logo_content .logo .logo_name {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sidebar #btn {
+  position: absolute;
+  color: #fff;
+  top: 6px;
+  left: 50%;
+  font-size: 26px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+}
+.sidebar.active #btn {
+  left: 90%;
+}
+.sidebar ul {
+  margin-top: 5px;
+  height: auto;
+}
+
+.sidebar ul li {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  margin: 0 5px;
+  list-style: none;
+  line-height: 40px;
+  margin: 5px 0;
+}
+.sidebar ul li .tooltip {
+  position: absolute;
+  left: 130px;
+  top: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  height: 35px;
+  width: 150px;
+  background: #fff;
+  line-height: 35px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+.sidebar.active ul li .tooltip {
+  display: none;
+}
+.sidebar ul li:hover .tooltip {
+  transition: all 0.5s ease;
+  opacity: 1;
+  top: 50%;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+}
+.sidebar ul li a:hover {
+  color: #11101d;
+  background: #fff;
+}
+.sidebar ul li i {
+  font-size: 24px;
+  font-weight: 400;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+.sidebar .links_name {
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.sidebar.active .links_name {
+  transition: 0s;
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar .profile_content {
+  position: relative;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* bottom: 20px; */
+}
+.sidebar .profile_content .profile {
+  position: relative;
+  padding: 10px 6px;
+  height: 60px;
+  background: none;
+  transition: all 0.4s ease;
+}
+.sidebar.active .profile_content .profile {
+  background: #1d1b31;
+}
+.profile_content .profile .profile_details {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+}
+.sidebar.active ~ .profile .profile_details {
+  opacity: 1;
+  pointer-events: auto;
+}
+.profile .profile_details img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.profile .profile_details .name_job {
+  margin-left: 10px;
+}
+.profile .profile_details .name {
+  font-size: 15px;
+  font-weight: 400;
+}
+.profile .profile_details .job {
+  font-size: 12px;
+}
+.profile #log_out {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  background: #1d1b31;
+}
+.sidebar.active .profile #log_out {
+  left: 88%;
+}
+.sidebar.active .profile #log_out {
+  background: none;
+}
+
+.home_content {
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 78px);
+  left: 78px;
+  background: #e4e9f7;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2px);
+  transition: all 0.5s ease;
+}
+.sidebar.active ~ .home_content {
+  z-index: 100;
+}
+.home_content .text {
+  font-size: 25px;
+  font-weight: 500;
+  color: #1d1b31;
+  margin: 12px;
+}
+.sidebar.active ~ .home_content {
+  width: calc(100% - 240px);
+  left: 240px;
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.formWrapper {
+  display: flex;
+  align-content: center;
+  width: 65%;
+  height: 400px;
+  background-color: aquamarine;
+  margin-top: 80px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px black;
+}
+
+.formDiv {
+  width: 50%;
+  padding: 8%;
+  background: lavender;
+  text-align: center;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.formDiv h2 {
+  color: navy;
+  text-transform: uppercase;
+  position: relative;
+  top: 20px;
+}
+
+.welcomeDiv {
+  width: 50%;
+  padding: 10%;
+  background-image: url(../img/caption.jpg);
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+.welcomeDiv h2 {
+  margin-top: 50px;
+}
+
+.formGroup {
+  width: 100%;
+  position: relative;
+  top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(153, 153, 240, 0.925); 
+}
+
+.formGroup .icon {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: grey;
+}
+input::placeholder {
+  position: relative;
+  /* left: 10px; */
+}
+
+.formGroup input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding-left: 40px;
+}
+
+.btn {
+  width: 50%;
+  padding: 15px;
+  background-color: green;
+  margin-top: 15px;
+  color: lavender;
+  border-radius: 20px;
+  border-style: none;
+  position: relative;
+  top: 35px;
+}
+
+.link-to-sign-in {
+  width: 90%;
+  position: relative;
+  top: 50px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.link-login {
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 5px;
+  color: blue;
+}
+
+.link-login:hover {
+  transform: scale(1.05);
+  margin-left: 8px;
+  transition: all ease 0.5s;
+  color: green;
+}
+
+.btn2 {
+  width: 70%;
+  padding: 15px;
+  background-color: #11101d;
+  margin-top: 15px;
+  color: lavender;
+  border-radius: 20px;
+  border-style: none;
+  border: 1px solid #fff;
+}
+
+.btn:hover,
+.btn2:hover {
+  background: #fff;
+  color: cornflowerblue;
+  border: 1px solid cornflowerblue;
+  box-shadow: 0px 0px 20px black;
+  font-weight: 700;
+  transition: all ease 0.5s;
+}
+
+@media screen and (max-width: 1100px) {
+  .formWrapper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .formWrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .formWrapper {
+    display: block;
+    background: none;
+    height: 100vh;
+  }
+
+  .formDiv {
+    width: 90%;
+    margin: 0px auto;
+  }
+
+  .link-to-sign-in {
+    display: flex;
+    width: 90%;
+    margin: 0px auto;
+    justify-content: center;
+    padding: 20px;
+  }
+  .welcomeDiv {
+    width: 100%;
+    height: 300px;
+    margin: 0px auto;
+    background-image: url(../img/gol.jpg);
+    background-size: cover;
+    position: relative;
+    top: 25px;
+  }
+
+  .welcomeDiv .btn2 {
+    display: none;
+  }
+
+  .welcomeDiv h2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .link-to-sign-in {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .link-to-sign-in {
+    display: block;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .formDiv h2 {
+    font-size: 16px;
+  }
+}

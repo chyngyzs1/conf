@@ -1,0 +1,169 @@
+{% load static %}
+<html>
+
+<head>
+    {% include 'pages/includes/links.html' %}
+    <title>Conference Site</title>
+</head>
+<body>
+{% include 'pages/includes/menubar.html' %}
+
+<div class="home_content">
+    {% include 'pages/includes/header.html' %}
+    <div class="slider">
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                    <img src="{% static 'pages/img/caption.jpg' %}"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'pages/img/slide2.jpg' %}"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'pages/img/slide3.jpg' %}"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'pages/img/slide4.jpg' %}"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'pages/img/slide5.jpg' %}"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'pages/img/gol.jpg' %}"/>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <main>
+        <div class="main">
+            <div class="container">
+                <div class="main-info">
+                    <h2> Welcome to the 9th International Online Conference on
+                        "Mathematical Analysis, Differential Equation & Applications MADEA 9"</h2>
+                    <p>We kindly invite you to participate in the online scientific conference MADEA-9, organized at the
+                        Kyrgyz-Turkish Manas University (Bishkek) on <span class="important">June 21-25, 2021.</span>
+                    </p>
+                    <ul class="events">
+                        <li><i class="far fa-square ico"></i> The first conference was held in <span class="important">August 26-30, 2003 </span>in
+                            National Juriy Fedkovich University of Chernivtsi (Chernivtsi, Ukraine)
+                        </li>
+                        <li><i class="far fa-square ico"></i> The second was held in <span class="important">September 07-11, 2004</span>
+                            in Mersin University (Mersin, Turkey)
+                        </li>
+                        <li><i class="far fa-square ico"></i> The third was held in <span class="important">September 18-23, 2006</span>
+                            in Uzhgorod National University (Uzhgorod, Ukraine)
+                        </li>
+                        <li><i class="far fa-square ico"></i> The fourth was held in <span class="important">September 12-15, 2008</span>
+                            at Eastern Mediterranean University (Famagusta, North Cyprus).
+                        </li>
+                        <li><i class="far fa-square ico"></i> The fifth was held in <span class="important">September 15-20, 2010</span>
+                            at Sunny Beach, Bulgaria.
+                        </li>
+                        <li><i class="far fa-square ico"></i> The sixth was held in <span class="important">September 04-09, 2012</span>
+                            in Mersin University (Mersin, Turkey)
+                        </li>
+                        <li><i class="far fa-square ico"></i> The seventh was held in <span class="important">September 08-13, 2015</span>
+                            in Institute of Mathematics and Mechanics NAS of Azerbaijan (Baku, Azerbaijan)
+                        </li>
+                        <li><i class="far fa-square ico"></i> The eighth was held in <span class="important">June 17-23, 2018</span>
+                            at the Kyrgyz-Turkish University "Manas" (Bishkek, Kyrgyz Republic).
+                        </li>
+                    </ul>
+                    <p>The official conference language is English. The Conference format includes the plenary lectures
+                        (30 minutes) and the section sessions (20 minutes).<br>
+                        The abstracts will be published prior to the beginning of the Conference.<br>
+                        The full text papers will be published following the standard reviewing process.</p>
+                </div>
+
+                <div class="fields">
+                    <h2>Scientific Fields of the Conference:</h2>
+                    <ul class="fields-of-conf">
+                        <li><i class="far fa-circle ico"></i> Applied analysis</li>
+                        <li><i class="far fa-circle ico"></i> Approximation and Interpolation theory</li>
+                        <li><i class="far fa-circle ico"></i> Extremal problems</li>
+                        <li><i class="far fa-circle ico"></i> Functional and Harmonic analysis</li>
+                        <li><i class="far fa-circle ico"></i> Functional-differential and stochastic equations</li>
+                        <li><i class="far fa-circle ico"></i> Functions of real and complex variables</li>
+                        <li><i class="far fa-circle ico"></i> Integral transformations</li>
+                        <li><i class="far fa-circle ico"></i> Partial differential equations</li>
+                        <li><i class="far fa-circle ico"></i> Qualitative and asymptotic methods in the theory of
+                            differential equations
+                        </li>
+                        <li><i class="far fa-circle ico"></i> Summability theory</li>
+                        <li><i class="far fa-circle ico"></i> Geometry</li>
+                        <li><i class="far fa-circle ico"></i> Algebra and Topology</li>
+                        <li><i class="far fa-circle ico"></i> Mathematical and Computer Modelling</li>
+                        <li><i class="far fa-circle ico"></i> History and Teaching of Mathematics, Informatics and
+                            Physics
+                        </li>
+                        <li><i class="far fa-circle ico"></i> Other</li>
+                    </ul>
+                </div>
+
+                <div class="table-users">
+                    <div class="table-header">Contributing Organizations</div>
+
+                    <table cellspacing="0">
+                        <tr>
+                            <td><img src="{% static 'pages/img/manas.png' %}" alt=""/></td>
+                            <td>Kyrgyz-Turkish Manas University <a href="http://intl.manas.edu.kg">(http://intl.manas.edu.kg)</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="{% static 'pages/img/ataturk.png' %}" alt=""/></td>
+                            <td>Atatürk University <a href="https://www.atauni.edu.tr/en/index">(https://www.atauni.edu.tr/en/index)</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="{% static 'pages/img/mersin.png' %}" alt=""/></td>
+                            <td>Mersin University <a href="http://www.mersin.edu.tr">(http://www.mersin.edu.tr)</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="{% static 'pages/img/im.png' %}" alt=""/></td>
+                            <td> Institute of Mathematics of NAS of Ukraine <a href="http://www.imath.kiev.ua">(http://www.imath.kiev.ua)</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="{% static 'pages/img/kiev.png' %}" alt=""/></td>
+                            <td>Taras Shevchenko National University of Kyiv <a href="http://www.univ.kiev.ua">(http://www.univ.kiev.ua)</a>
+                            </td>
+                        </tr>
+                    </table>
+
+
+
+                </div>
+                <div class="visitors">
+
+                    <a href="https://info.flagcounter.com/yWtP"><img
+            src="https://s04.flagcounter.com/countxl/yWtP/bg_FFFFFF/txt_000000/border_CCCCCC/columns_6/maxflags_30/viewers_0/labels_0/pageviews_1/flags_0/percent_0/"
+            alt="Flag Counter" border="0"></a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    {% include 'pages/includes/footer.html' %}
+</div>
+
+
+<script src="{% static 'pages/js/all.js' %}"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="{% static 'pages/js/index.js' %}"></script>
+</body>
+</html>

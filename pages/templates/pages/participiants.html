@@ -1,0 +1,141 @@
+{% load static %}
+<html lang="en">
+<head>
+    {% include 'pages/includes/links.html' %}
+    <link rel="stylesheet" href="{% static 'pages/css/participiants.css' %}"/>
+    <title>Conference Site</title>
+</head>
+<body>
+{% include 'pages/includes/menubar.html' %}
+<div class="home_content">
+    {% include 'pages/includes/header.html' %}
+    <main>
+        <div class="main">
+            <div class="container">
+
+
+                <div class="table-users">
+                    <div class="table-header">Registered Participants</div>
+
+                    <table cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Order</th>
+                            <th>Title</th>
+                            <th>Name</th>
+                            <th>University</th>
+                            <th>Abstract Title</th>
+                            <th>Presentation Type</th>
+                            <th>Situation</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>post-graduate student</td>
+                            <td>Abdiev Azim</td>
+                            <td>Balasagyn Kyrgyz National University</td>
+                            <td></td>
+                            <td>Oral</td>
+                            <td>Accepted</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Professor</td>
+                            <td>Abdullayev Fahreddin</td>
+                            <td>Kyrgyz-Turkish Manas University; Mersin University</td>
+                            <td>Bernstein - Markov - Nikol'skii type Inequalities for Algebraic Polynomials</td>
+                            <td>Oral</td>
+                            <td>Accepted</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td> Assosiate Professor</td>
+                            <td>Abdyldaeva Elmira</td>
+                            <td>Kyrgyz-Turkish Manas University</td>
+                            <td></td>
+                            <td>Oral</td>
+                            <td>Accepted</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Research assistant</td>
+                            <td>Abylaeva Ella</td>
+                            <td>Kyrgyz-Turkish Manas University</td>
+                            <td>Asymptotics of the solution of parabolic problems with nonsmooth boundary functions</td>
+                            <td>Oral</td>
+                            <td>Accepted</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Senior Researcher</td>
+                            <td>Afanas'eva Elena</td>
+                            <td>Institute of Applied Mathematics and Mechanics of NASU</td>
+                            <td>Absolute continuity of quasisymmetric mappings in metric spaces</td>
+                            <td>Oral</td>
+                            <td>Accepted</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>physicist</td>
+                            <td> Akmatbekova Azat</td>
+                            <td>Kyrgyz-Turkish Manas University</td>
+                            <td></td>
+                            <td>Oral</td>
+                            <td>Accepted</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td> physics teacher</td>
+                            <td> Akmatbekova Azat</td>
+                            <td>Kyrgyz-Turkish Manas University</td>
+                            <td>Organization of virtual laboratory work of students in physics in the distance learning
+                                system
+                            </td>
+                            <td>Oral</td>
+                            <td>Accepted</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Research Assistant</td>
+                            <td> AKTAY MERVE</td>
+                            <td>Ataturk University</td>
+                            <td>On φ-weak Pata contractions in metric spaces</td>
+                            <td>Oral</td>
+                            <td>Accepted</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Research Assistant</td>
+                            <td> AKTAY MERVE</td>
+                            <td>Ataturk University</td>
+                            <td>On φ-weak Pata contractions in metric spaces</td>
+                            <td>Oral</td>
+                            <td>Accepted</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Kyrgyz-Turkish Manas Universty</td>
+                            <td> Altıntaş İsmet</td>
+                            <td>Kyrgyz-Turkish Manas Universty</td>
+                            <td></td>
+                            <td>Oral</td>
+                            <td>Accepted</td>
+                        </tr>
+                        </tbody>
+
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </main>
+     {% include 'pages/includes/footer.html' %}
+
+</div>
+<script src="{% static 'pages/js/index.js' %}"></script>
+
+</body>
+</html>

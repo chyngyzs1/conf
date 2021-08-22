@@ -1,0 +1,72 @@
+{% load static %}
+<html>
+
+<head>
+    <title>User Room</title>
+    {% include 'pages/includes/links.html' %}
+    <link rel="stylesheet" href="{% static 'pages/css/home.css' %}"/>
+</head>
+<body>
+{% include 'pages/includes/menubar.html' %}
+<div class="home_content">
+    {% include 'pages/includes/header.html' %}
+    <div class="main">
+        <div class="container">
+            <!-- Button trigger modal -->
+
+            <a href="{% url 'sendform_page' %}"><input type="submit" class="sendsubnew-btn" value="Send new form"></a>
+            <a class="sendsubnew-btn" href="{% url 'logout_page' %}">Logout</a><br>
+
+
+            {% if update %}
+            <h2><p class="update-btn">Update page</p></h2>
+            <p class="update-btn"><a class="sendsubnew-btn" href="{% url 'user_room' %}">Go back</a></p>
+
+            <form id="update_data" method="post">
+                {% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+            </form>
+            <button form="update_data" type="submit" class="sendsubnew-btn">Update</button>
+
+            {% else %}
+            <h2>Your Forms:</h2>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th scope="col">Abstract Title</th>
+                    <th scope="col">Sending Date</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in list_forms %}
+                <tr>
+                    <td>{{ i.abstract_title }}</td>
+                    <td>{{ i.send_date }}</td>
+                    <td><a style="text-decoration:none" href="{% url 'update_form' i.id %}">Update</a></td>
+                    <td><a style="text-decoration:none" href="{% url 'delete_form' i.id %}">Delete</a></td>
+                    {% if i.status == 'In Process' %}
+                    <td style="color:blue">{{ i.status }}</td>
+                    {% elif i.status == 'Accepted' %}
+                    <td style="color:green">{{ i.status }}</td>
+                    {% elif i.status == 'Failed' %}
+                    <td style="color:red">{{ i.status }}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+        </div>
+    </div>
+
+    {% include 'pages/includes/footer.html' %}
+</div>
+
+<script src="{% static 'pages/js/index.js' %}"></script>
+</body>
+</html>

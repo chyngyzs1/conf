@@ -1,0 +1,117 @@
+{% load static %}
+<div class="sidebar">
+    <div class="logo_content">
+        <div class="logo">
+            <i class="bx bx-book-reader"></i>
+            <div class="logo_name">MADEA</div>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav_list">
+        <!-- <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li> -->
+        <li>
+            <a href="{% url 'home_page' %}">
+                <i class="bx bx-home"></i>
+                <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+        </li>
+        <li>
+            <a href="{% url 'sendform_page' %}">
+                <i class="bx bx-mail-send"></i>
+                <span class="links_name">Send Form</span>
+            </a>
+            <span class="tooltip">Send Form</span>
+        </li>
+        <li>
+            <a href="{% url 'committee_page' %}">
+                <i class="bx bx-group"></i>
+                <span class="links_name">Comittee</span>
+            </a>
+            <span class="tooltip">Comittee</span>
+        </li>
+        <li>
+            <a href="{% url 'speakers_page' %}">
+                <i class="bx bx-user-voice"></i>
+                <span class="links_name">Plenary Speakers</span>
+            </a>
+            <span class="tooltip">Plenary Speakers</span>
+        </li>
+        <li>
+            <a href="{% url 'abstempl_page' %}">
+                <i class="bx bxs-book-open"></i>
+                <span class="links_name">Abstract template</span>
+            </a>
+            <span class="tooltip">Abstract template</span>
+        </li>
+        <li>
+            <a href="{% url 'impdate_page' %}">
+                <i class="bx bx-calendar"></i>
+                <span class="links_name">Important dates</span>
+            </a>
+            <span class="tooltip">Important dates</span>
+        </li>
+        <li>
+            <a href="{% url 'conftopic_page' %}">
+                <i class="bx bxs-pencil"></i>
+                <span class="links_name">Conference topics</span>
+            </a>
+            <span class="tooltip">Conference topics</span>
+        </li>
+        <li>
+            <a href="{% url 'particip_page' %}">
+                <i class="bx bxs-user-account"></i>
+                <span class="links_name">Participiants</span>
+            </a>
+            <span class="tooltip">Participiants</span>
+        </li>
+        <li>
+            <a href="{% url 'proceeding_page' %}">
+                <i class="bx bx-file"></i>
+                <span class="links_name">Proceedings</span>
+            </a>
+            <span class="tooltip">Proceedings</span>
+        </li>
+        <li>
+            <a href="{% url 'kyrgyzstan_page'%}">
+                <i class="bx bxs-map"></i>
+                <span class="links_name">About Kyrgyzstan</span>
+            </a>
+            <span class="tooltip">About Kyrgyzstan</span>
+        </li>
+        <li>
+            <a href="{% url 'history_madea_page'%}">
+                <i class="bx bx-history"></i>
+                <span class="links_name">History of MADEA</span>
+            </a>
+            <span class="tooltip">History of MADEA</span>
+        </li>
+
+        <li>
+            <a href="{% url 'gallery_page'%}">
+                <i class="bx bx-photo-album"></i>
+                <span class="links_name">Gallery</span>
+            </a>
+            <span class="tooltip">Gallery</span>
+        </li>
+        <li>
+            <a href="{% url 'contacts_page'%}">
+                <i class="bx bxs-phone-call"></i>
+                <span class="links_name">Contacts</span>
+            </a>
+            <span class="tooltip">Contacts</span>
+        </li>
+    </ul>
+    {% if request.user.is_authenticated %}
+    <div class="profile_content">
+        <div class="profile">
+
+            <a href="{% url 'logout_page' %} " style ="color:#fff"><i class="bx bx-log-out" id="log_out"></i></a>
+        </div>
+    </div>
+    {% endif %}
+</div>
